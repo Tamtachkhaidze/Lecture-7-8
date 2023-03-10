@@ -1,0 +1,54 @@
+body {
+    background-image: url("../images/COSMOS.jpg");
+    background-color: wheat;
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+.container {
+    position: absolute;
+    width:1170px;
+    height: auto;
+    margin: 0 auto;
+}
+.earth {
+    position: absolute;
+    width: 400px;
+    top: 30%;
+    left: 40%;
+    transform-origin: center;
+    animation: earth 10s ease-in-out infinite;
+}
+
+@keyframes earth {
+    0% { transform :rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+.moon {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
+
+
+.moon {
+    animation: spin 10s linear infinite;
+    width: 150px;
+}
+
+.moon img  {
+    position: absolute;
+    animation: spin 10s linear infinite;
+    width: 100%;
+    pointer-events: none;
+    transform-origin:-30%;
+    transform: translateX(-350px) translateY(-350px);
+    z-index: -1;
+}
+@keyframes spin {
+    to {
+        transform: rotateZ(550deg);
+    }
+
+}
